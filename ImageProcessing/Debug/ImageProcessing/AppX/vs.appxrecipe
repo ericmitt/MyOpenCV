@@ -26,11 +26,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.exe">
       <PackagePath>ImageProcessing.exe</PackagePath>
-      <Modified>2015-04-27T22:28:00.715</Modified>
+      <Modified>2015-04-27T23:46:48.217</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.winmd">
       <PackagePath>ImageProcessing.winmd</PackagePath>
-      <Modified>2015-04-27T22:28:00.872</Modified>
+      <Modified>2015-04-27T23:46:50.680</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\iss_earth_viewer.jpg">
       <PackagePath>Assets\iss_earth_viewer.jpg</PackagePath>
@@ -86,7 +86,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-04-27T22:23:55.651</Modified>
+      <Modified>2015-04-27T23:46:45.706</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\resources.pri">
       <PackagePath>resources.pri</PackagePath>

@@ -112,13 +112,13 @@ void ImageProcessing::MainPage::Button_Click_2(Platform::Object^ sender, Windows
 	if (x >= 3)
 		cv::cvtColor(Lena, gray, CV_BGR2GRAY); //bug bug
 
-	const int MEDIAN_BLUR_FILTER_SIZE = 9;
+	const int MEDIAN_BLUR_FILTER_SIZE = slider1->Value; //9;
 	medianBlur(gray, gray, MEDIAN_BLUR_FILTER_SIZE);
 	cv::Mat edges;
-	const int LAPLACIAN_FILTER_SIZE = 5;
+	const int LAPLACIAN_FILTER_SIZE = slider2->Value; //5;
 	Laplacian(gray, edges, CV_8U, LAPLACIAN_FILTER_SIZE);
 	cv::Mat mask;
-	const int EDGES_THRESHOLD = 40;
+	const int EDGES_THRESHOLD = slider3->Value; //40;
 	threshold(edges, mask, EDGES_THRESHOLD, 255, cv::THRESH_BINARY_INV);
 	cv::cvtColor(mask, intermediateMat, CV_GRAY2BGR);
 

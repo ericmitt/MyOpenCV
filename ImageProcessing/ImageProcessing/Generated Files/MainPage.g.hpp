@@ -24,6 +24,12 @@ void ::ImageProcessing::MainPage::InitializeComponent()
 
     // Get the Image named 'ctlImg'
     ctlImg = safe_cast<::Windows::UI::Xaml::Controls::Image^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"ctlImg"));
+    // Get the Slider named 'slider1'
+    slider1 = safe_cast<::Windows::UI::Xaml::Controls::Slider^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"slider1"));
+    // Get the Slider named 'slider2'
+    slider2 = safe_cast<::Windows::UI::Xaml::Controls::Slider^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"slider2"));
+    // Get the Slider named 'slider3'
+    slider3 = safe_cast<::Windows::UI::Xaml::Controls::Slider^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"slider3"));
 }
 
 void ::ImageProcessing::MainPage::Connect(int connectionId, Platform::Object^ target)

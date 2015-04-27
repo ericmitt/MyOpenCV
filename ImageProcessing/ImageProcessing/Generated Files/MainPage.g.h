@@ -13,6 +13,7 @@ namespace Windows {
         namespace Xaml {
             namespace Controls {
                 ref class Image;
+                ref class Slider;
             }
         }
     }
@@ -31,6 +32,9 @@ namespace ImageProcessing
         bool _contentLoaded;
     
         private: ::Windows::UI::Xaml::Controls::Image^ ctlImg;
+        private: ::Windows::UI::Xaml::Controls::Slider^ slider1;
+        private: ::Windows::UI::Xaml::Controls::Slider^ slider2;
+        private: ::Windows::UI::Xaml::Controls::Slider^ slider3;
     };
 }
 
