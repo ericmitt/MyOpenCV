@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MININT-HVD7UST</Machine>
+    <WindowsUser>ericmitt</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|Win32</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>c2cadd2c-208b-42e4-99c6-dd3e614c3ea0</PackageIdentityName>
+    <IntermediateOutputPath>C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>C1C13ABAE282958B43F5354FD8A2281D189005AA3B42A863BA7EEF6FF5C83D74</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>c2cadd2c-208b-42e4-99c6-dd3e614c3ea0_1.0.0.0_x86__v20vdbxqwmcsg</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>c2cadd2c-208b-42e4-99c6-dd3e614c3ea0_v20vdbxqwmcsg!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>c2cadd2c-208b-42e4-99c6-dd3e614c3ea0</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=ericmitt</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-27T22:05:48.799</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.exe">
+      <PackagePath>ImageProcessing.exe</PackagePath>
+      <Modified>2015-04-27T22:28:00.715</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.winmd">
+      <PackagePath>ImageProcessing.winmd</PackagePath>
+      <Modified>2015-04-27T22:28:00.872</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\iss_earth_viewer.jpg">
+      <PackagePath>Assets\iss_earth_viewer.jpg</PackagePath>
+      <Modified>2014-05-16T20:01:45.921</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300d.dll">
+      <PackagePath>opencv_core300d.dll</PackagePath>
+      <Modified>2015-04-27T19:12:36.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300d.dll">
+      <PackagePath>opencv_imgproc300d.dll</PackagePath>
+      <Modified>2015-04-27T19:12:52.921</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300d.dll">
+      <PackagePath>opencv_imgcodecs300d.dll</PackagePath>
+      <Modified>2015-04-27T19:13:14.109</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_features2d300d.dll">
+      <PackagePath>opencv_features2d300d.dll</PackagePath>
+      <Modified>2015-04-27T19:13:14.366</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_flann300d.dll">
+      <PackagePath>opencv_flann300d.dll</PackagePath>
+      <Modified>2015-04-27T19:12:52.044</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_ml300d.dll">
+      <PackagePath>opencv_ml300d.dll</PackagePath>
+      <Modified>2015-04-27T19:12:46.888</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-04-27T22:05:44.659</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-04-27T22:23:55.651</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-04-27T22:05:48.450</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
