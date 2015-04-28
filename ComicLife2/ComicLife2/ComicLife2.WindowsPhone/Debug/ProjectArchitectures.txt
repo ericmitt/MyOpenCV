@@ -1,0 +1,1 @@
+C:\temp\opencv\samples\winrt\ComicLife2\ComicLife2\ComicLife2.WindowsPhone\ComicLife2.WindowsPhone.vcxproj;x86
