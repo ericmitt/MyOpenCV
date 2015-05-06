@@ -8,7 +8,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c2cadd2c-208b-42e4-99c6-dd3e614c3ea0</PackageIdentityName>
     <IntermediateOutputPath>C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>C1C13ABAE282958B43F5354FD8A2281D189005AA3B42A863BA7EEF6FF5C83D74</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>1803ABE8792330E3EA85FAEBBAE2E46E1BB03663BCB57FE9E0739ABC439C88DB</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c2cadd2c-208b-42e4-99c6-dd3e614c3ea0_1.0.0.0_x86__v20vdbxqwmcsg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c2cadd2c-208b-42e4-99c6-dd3e614c3ea0_v20vdbxqwmcsg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c2cadd2c-208b-42e4-99c6-dd3e614c3ea0</RegisteredPackageID>
@@ -17,24 +17,40 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\AppxManifest.xml">
+    <AppXManifest Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-27T22:05:48.799</Modified>
+      <Modified>2015-05-06T05:07:01.966</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.exe">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.exe">
       <PackagePath>ImageProcessing.exe</PackagePath>
-      <Modified>2015-04-27T23:46:48.217</Modified>
+      <Modified>2015-05-06T20:55:35.619</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.winmd">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.winmd">
       <PackagePath>ImageProcessing.winmd</PackagePath>
-      <Modified>2015-04-27T23:46:50.680</Modified>
+      <Modified>2015-04-28T04:37:52.437</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\haarcascade_frontalface_alt.xml">
+      <PackagePath>Assets\haarcascade_frontalface_alt.xml</PackagePath>
+      <Modified>2015-03-20T01:02:15.913</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\group1.jpg">
+      <PackagePath>Assets\group1.jpg</PackagePath>
+      <Modified>2012-05-06T02:41:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\group2.jpg">
+      <PackagePath>Assets\group2.jpg</PackagePath>
+      <Modified>2012-05-06T09:22:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\iss_earth_viewer.jpg">
       <PackagePath>Assets\iss_earth_viewer.jpg</PackagePath>
       <Modified>2014-05-16T20:01:45.921</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\ouam.jpg">
+      <PackagePath>Assets\ouam.jpg</PackagePath>
+      <Modified>2015-02-26T16:59:22.282</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -55,6 +71,10 @@
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\WS\8.1\x86\bin\Debug\opencv_objdetect300d.dll">
+      <PackagePath>opencv_objdetect300d.dll</PackagePath>
+      <Modified>2015-04-27T19:13:13.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300d.dll">
       <PackagePath>opencv_core300d.dll</PackagePath>
@@ -80,17 +100,17 @@
       <PackagePath>opencv_ml300d.dll</PackagePath>
       <Modified>2015-04-27T19:12:46.888</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\App.xbf">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\App.xbf">
       <PackagePath>App.xbf</PackagePath>
       <Modified>2015-04-27T22:05:44.659</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\MainPage.xbf">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-04-27T23:46:45.706</Modified>
+      <Modified>2015-05-06T20:55:35.255</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\resources.pri">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-04-27T22:05:48.450</Modified>
+      <Modified>2015-05-06T05:07:01.872</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

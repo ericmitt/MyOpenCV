@@ -8,8 +8,7 @@
 #include "MainPage.g.h"
 #include <opencv2\core\core.hpp>
 #include <opencv2\imgproc\imgproc.hpp>
-//#include <opencv2\features2d\features2d.hpp>
-
+#include <opencv2\features2d\features2d.hpp>
 
 namespace ImageProcessing
 {
@@ -22,15 +21,16 @@ namespace ImageProcessing
 		MainPage();
 
 	private:
-		void Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
-	
+		cv::Mat Lena;
+		
 	
 		void UpdateImage(const cv::Mat& image);
-
-
+		void InitDetectcion(std::string name);
 	
-	
+		void Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void Button_Click_1(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void Button_Click_2(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Button_Click_3(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Button_Click_4(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }

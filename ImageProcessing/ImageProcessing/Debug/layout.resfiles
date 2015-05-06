@@ -1,7 +1,11 @@
 App.xbf
 MainPage.xbf
+Assets\group1.jpg
+Assets\group2.jpg
+Assets\haarcascade_frontalface_alt.xml
 Assets\iss_earth_viewer.jpg
 Assets\Logo.scale-100.png
+Assets\ouam.jpg
 Assets\SmallLogo.scale-100.png
 Assets\SplashScreen.scale-100.png
 Assets\StoreLogo.scale-100.png
@@ -11,3 +15,4 @@ opencv_flann300d.dll
 opencv_imgcodecs300d.dll
 opencv_imgproc300d.dll
 opencv_ml300d.dll
+opencv_objdetect300d.dll

@@ -2,6 +2,6 @@
   <ReferenceAssemblyList>
     <LocalAssembly PathName="c:\temp\opencv\samples\winrt\comiclife2\debug\comiclife2.windows\comiclife2.winmd" HashGuid="96c3830e-f3ac-e2ce-9795-2e8a0c2d3a9a" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
-    <ReferenceAssembly PathName="c:\temp\opencv\samples\winrt\comiclife2\mediaextensions\ocvtransform\debug\ocvtransform\ocvtransform.winmd" HashGuid="90f8a118-bf76-c292-afd9-0312c91cbd5f" />
+    <ReferenceAssembly PathName="c:\temp\myopencv\comiclife2\mediaextensions\ocvtransform\debug\ocvtransform\ocvtransform.winmd" HashGuid="90f8a118-bf76-c292-afd9-0312c91cbd5f" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

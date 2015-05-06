@@ -39,6 +39,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ImageProcessing_TemporaryKey.pfx" />
+    <None Include="$(OpenCV_Bin)opencv_core300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_imgproc300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_imgcodecs300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_features2d300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_flann300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_ml300$(DebugSuffix).dll" />
+    <None Include="..\..\..\opencv\bin\WS\8.1\x86\bin\Debug\opencv_objdetect300d.dll" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
@@ -47,5 +54,19 @@
     <Image Include="Assets\iss_earth_viewer.jpg">
       <Filter>Assets</Filter>
     </Image>
+    <Image Include="Assets\ouam.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\group1.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\group2.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\haarcascade_frontalface_alt.xml">
+      <Filter>Assets</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

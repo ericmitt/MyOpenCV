@@ -117,12 +117,20 @@
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;opencv_imgcodecs300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_objdetect300d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OpenCV_Lib);%(AdditionalLibraryDirectories);C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\lib</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;opencv_imgcodecs300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_objdetect300d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OpenCV_Lib);%(AdditionalLibraryDirectories);C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\lib</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -157,11 +165,17 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="..\..\..\opencv\bin\WS\8.1\x86\bin\Debug\opencv_objdetect300d.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="ImageProcessing_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\group1.jpg" />
+    <Image Include="Assets\group2.jpg" />
     <Image Include="Assets\iss_earth_viewer.jpg" />
     <Image Include="Assets\Logo.scale-100.png" />
+    <Image Include="Assets\ouam.jpg" />
     <Image Include="Assets\SmallLogo.scale-100.png" />
     <Image Include="Assets\StoreLogo.scale-100.png" />
     <Image Include="Assets\SplashScreen.scale-100.png" />
@@ -181,6 +195,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\haarcascade_frontalface_alt.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

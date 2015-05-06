@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MININT-HVD7UST</Machine>
+    <WindowsUser>ericmitt</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|Win32</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>f8308285-aea6-41b1-a76e-9954cfd46c7e</PackageIdentityName>
+    <IntermediateOutputPath>C:\temp\MyOpenCV\FaceDetection\FaceDetection\Release\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>9CA4281E8B1BF8805961EDE7FB437F450FDD553292836E3EDAA9C03E35CD31F8</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>f8308285-aea6-41b1-a76e-9954cfd46c7e_1.0.0.0_x86__v20vdbxqwmcsg</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>f8308285-aea6-41b1-a76e-9954cfd46c7e_v20vdbxqwmcsg!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>f8308285-aea6-41b1-a76e-9954cfd46c7e</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=ericmitt</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\temp\myopenCV\FaceDetection\Release\FaceDetection\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-06T18:46:45.709</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\temp\myopenCV\FaceDetection\Release\FaceDetection\FaceDetection.exe">
+      <PackagePath>FaceDetection.exe</PackagePath>
+      <Modified>2015-05-06T18:31:39.655</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\myopenCV\FaceDetection\Release\FaceDetection\FaceDetection.winmd">
+      <PackagePath>FaceDetection.winmd</PackagePath>
+      <Modified>2015-05-06T18:31:34.739</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\haarcascade_frontalface_alt.xml">
+      <PackagePath>Assets\haarcascade_frontalface_alt.xml</PackagePath>
+      <Modified>2015-03-20T01:02:15.913</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\group1.jpg">
+      <PackagePath>Assets\group1.jpg</PackagePath>
+      <Modified>2012-05-06T09:22:22.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\group2.JPG">
+      <PackagePath>Assets\group2.JPG</PackagePath>
+      <Modified>2013-05-14T17:51:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\group4.JPG">
+      <PackagePath>Assets\group4.JPG</PackagePath>
+      <Modified>2015-05-06T18:28:33.717</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\group5.jpg">
+      <PackagePath>Assets\group5.jpg</PackagePath>
+      <Modified>2015-05-06T18:23:34.856</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\group3.png">
+      <PackagePath>Assets\group3.png</PackagePath>
+      <Modified>2015-05-06T18:17:07.159</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\FaceDetection\FaceDetection\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T14:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300.dll">
+      <PackagePath>opencv_core300.dll</PackagePath>
+      <Modified>2015-04-27T19:14:56.965</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300.dll">
+      <PackagePath>opencv_imgproc300.dll</PackagePath>
+      <Modified>2015-04-27T19:15:41.639</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_features2d300.dll">
+      <PackagePath>opencv_features2d300.dll</PackagePath>
+      <Modified>2015-04-27T19:16:22.433</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_flann300.dll">
+      <PackagePath>opencv_flann300.dll</PackagePath>
+      <Modified>2015-04-27T19:15:32.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_ml300.dll">
+      <PackagePath>opencv_ml300.dll</PackagePath>
+      <Modified>2015-04-27T19:15:20.359</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300d.dll">
+      <PackagePath>opencv_core300d.dll</PackagePath>
+      <Modified>2015-04-27T19:12:36.894</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300.dll">
+      <PackagePath>opencv_imgcodecs300.dll</PackagePath>
+      <Modified>2015-04-27T19:16:15.936</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300d.dll">
+      <PackagePath>opencv_imgcodecs300d.dll</PackagePath>
+      <Modified>2015-04-27T19:13:14.109</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300d.dll">
+      <PackagePath>opencv_imgproc300d.dll</PackagePath>
+      <Modified>2015-04-27T19:12:52.921</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_objdetect300.dll">
+      <PackagePath>opencv_objdetect300.dll</PackagePath>
+      <Modified>2015-04-27T19:16:20.424</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_objdetect300d.dll">
+      <PackagePath>opencv_objdetect300d.dll</PackagePath>
+      <Modified>2015-04-27T19:13:13.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\myopenCV\FaceDetection\Release\FaceDetection\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-05-06T17:19:19.367</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\myopenCV\FaceDetection\Release\FaceDetection\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-05-06T18:46:43.068</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\myopenCV\FaceDetection\Release\FaceDetection\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-05-06T18:46:45.544</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Retail\ARM\Microsoft.VCLibs.ARM.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Retail\x64\Microsoft.VCLibs.x64.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Retail\x86\Microsoft.VCLibs.x86.12.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

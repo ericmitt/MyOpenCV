@@ -10,20 +10,32 @@
     <IntermediateOutputPath>C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\AppxManifest.xml">
+    <AppXManifest Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.exe">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.exe">
       <PackagePath>ImageProcessing.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.winmd">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.winmd">
       <PackagePath>ImageProcessing.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\haarcascade_frontalface_alt.xml">
+      <PackagePath>Assets\haarcascade_frontalface_alt.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\group1.jpg">
+      <PackagePath>Assets\group1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\group2.jpg">
+      <PackagePath>Assets\group2.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\iss_earth_viewer.jpg">
       <PackagePath>Assets\iss_earth_viewer.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\ouam.jpg">
+      <PackagePath>Assets\ouam.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
@@ -40,6 +52,9 @@
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\ImageProcessing\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\temp\opencv\bin\WS\8.1\x86\bin\Debug\opencv_objdetect300d.dll">
+      <PackagePath>opencv_objdetect300d.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300d.dll">
       <PackagePath>opencv_core300d.dll</PackagePath>
@@ -59,13 +74,13 @@
     <AppxPackagedFile Include="C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_ml300d.dll">
       <PackagePath>opencv_ml300d.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\App.xbf">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\MainPage.xbf">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\temp\myopenCV\ImageProcessing\Debug\ImageProcessing\resources.pri">
+    <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
