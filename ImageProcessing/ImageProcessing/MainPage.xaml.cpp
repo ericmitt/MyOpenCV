@@ -130,8 +130,6 @@ void ImageProcessing::MainPage::Button_Click_1(Platform::Object^ sender, Windows
 
 void ImageProcessing::MainPage::Button_Click_2(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-
-
 	cv::Mat intermediateMat;
 	cv::Mat gray;
 	Lena.copyTo(gray);

@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.exe">
       <PackagePath>ImageProcessing.exe</PackagePath>
-      <Modified>2015-05-06T20:55:35.619</Modified>
+      <Modified>2015-05-06T23:24:50.913</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\ImageProcessing.winmd">
       <PackagePath>ImageProcessing.winmd</PackagePath>
@@ -106,7 +106,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-05-06T20:55:35.255</Modified>
+      <Modified>2015-05-06T23:24:48.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\temp\MyOpenCV\ImageProcessing\Debug\ImageProcessing\resources.pri">
       <PackagePath>resources.pri</PackagePath>
