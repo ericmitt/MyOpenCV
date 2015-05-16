@@ -47,6 +47,7 @@ enum ProcessingType
     Sobel,
     Histogram,
 	ComicEffect,
+	FaceDetec,
 	InvalidEffect
 };
 

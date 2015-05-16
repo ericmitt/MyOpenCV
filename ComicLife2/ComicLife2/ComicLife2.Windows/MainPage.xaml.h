@@ -39,6 +39,11 @@ namespace ComicLife2
 		bool m_bPreviewing;
 		int mode;
 
+		MainPage^ rootPage;
+		Windows::Foundation::Collections::IPropertySet^ appSettings;
+
+
+
 	private:
 		void btn1_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void btn2_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
@@ -46,5 +51,6 @@ namespace ComicLife2
 		void btn4_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 		void Button_Click_1(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Button_Click_2(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }

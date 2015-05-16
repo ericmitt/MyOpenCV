@@ -127,7 +127,7 @@
     </ClCompile>
     <Link />
     <Link>
-      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_imgcodecs300$(DebugSuffix).lib</AdditionalDependencies>
+      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_imgcodecs300$(DebugSuffix).lib;opencv_objdetect300d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -137,7 +137,7 @@
     </ClCompile>
     <Link />
     <Link>
-      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_imgcodecs300$(DebugSuffix).lib</AdditionalDependencies>
+      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_imgcodecs300$(DebugSuffix).lib;opencv_objdetect300d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -166,13 +166,17 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="..\..\..\..\..\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300d.dll">
+    <None Include="..\..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300d.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_objdetect300d.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="..\..\..\OcvImageProcessing\OcvImageProcessing\opencv.props" />
     <None Include="ComicLife2.Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\grpPC1.jpg" />
     <Image Include="Assets\stars.png" />
     <Image Include="Assets\Lena.png" />
     <Image Include="Assets\Logo.scale-100.png" />
@@ -189,6 +193,9 @@
     <ProjectReference Include="..\..\MediaExtensions\OcvTransform\OcvTransform.vcxproj">
       <Project>{ba69218f-da5c-4d14-a78d-21a9e4dec669}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\haarcascade_frontalface_alt.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

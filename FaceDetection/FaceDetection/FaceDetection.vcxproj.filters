@@ -39,14 +39,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FaceDetection_TemporaryKey.pfx" />
-    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300d.dll" />
     <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300d.dll" />
-    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300d.dll" />
     <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_objdetect300d.dll" />
-    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300.dll" />
     <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300.dll" />
     <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300.dll" />
     <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_objdetect300.dll" />
+    <None Include="$(OpenCV_Bin)opencv_core300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_imgproc300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_features2d300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_flann300$(DebugSuffix).dll" />
+    <None Include="$(OpenCV_Bin)opencv_ml300$(DebugSuffix).dll" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
@@ -67,9 +69,21 @@
     <Image Include="Assets\group5.jpg">
       <Filter>Assets</Filter>
     </Image>
+    <Image Include="Assets\groupBody1.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\groupBody2.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\groupBody3.jpg">
+      <Filter>Assets</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Assets\haarcascade_frontalface_alt.xml">
+      <Filter>Assets</Filter>
+    </Xml>
+    <Xml Include="Assets\haarcascade_fullbody.xml">
       <Filter>Assets</Filter>
     </Xml>
   </ItemGroup>

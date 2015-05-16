@@ -30,6 +30,12 @@ void ::ImageProcessing::MainPage::InitializeComponent()
     slider2 = safe_cast<::Windows::UI::Xaml::Controls::Slider^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"slider2"));
     // Get the Slider named 'slider3'
     slider3 = safe_cast<::Windows::UI::Xaml::Controls::Slider^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"slider3"));
+    // Get the Slider named 'sliderCanny'
+    sliderCanny = safe_cast<::Windows::UI::Xaml::Controls::Slider^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"sliderCanny"));
+    // Get the Slider named 'sliderCanny2'
+    sliderCanny2 = safe_cast<::Windows::UI::Xaml::Controls::Slider^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"sliderCanny2"));
+    // Get the CheckBox named 'chkBin'
+    chkBin = safe_cast<::Windows::UI::Xaml::Controls::CheckBox^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"chkBin"));
 }
 
 void ::ImageProcessing::MainPage::Connect(int connectionId, Platform::Object^ target)

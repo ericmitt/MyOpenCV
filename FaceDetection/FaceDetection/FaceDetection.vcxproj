@@ -163,12 +163,6 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300.dll">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300d.dll">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
     <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
@@ -176,9 +170,6 @@
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300.dll">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
-    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300d.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_objdetect300.dll">
@@ -195,6 +186,9 @@
     <Image Include="Assets\group3.png" />
     <Image Include="Assets\group4.JPG" />
     <Image Include="Assets\group5.jpg" />
+    <Image Include="Assets\groupBody1.jpg" />
+    <Image Include="Assets\groupBody2.jpg" />
+    <Image Include="Assets\groupBody3.jpg" />
     <Image Include="Assets\Logo.scale-100.png" />
     <Image Include="Assets\SmallLogo.scale-100.png" />
     <Image Include="Assets\StoreLogo.scale-100.png" />
@@ -218,6 +212,7 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Assets\haarcascade_frontalface_alt.xml" />
+    <Xml Include="Assets\haarcascade_fullbody.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -17,6 +17,7 @@
         <TextBox x:Name="txtMsg" HorizontalAlignment="Left" Height="205" Margin="290,531,0,0" TextWrapping="Wrap" Text="Ready" VerticalAlignment="Top" Width="1044" AcceptsReturn="True" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         <Button Content="Test" HorizontalAlignment="Left" Height="62" Margin="37,528,0,0" VerticalAlignment="Top" Width="200" Click="Button_Click"/>
         <Button Content="VideoEffects" HorizontalAlignment="Left" Height="62" Margin="37,362,0,0" VerticalAlignment="Top" Width="200" Click="Button_Click_1"/>
+        <Button Content="Test2" HorizontalAlignment="Left" Height="62" Margin="37,612,0,0" VerticalAlignment="Top" Width="200" Click="Button_Click_2"/>
 
     </Grid>
 </Page>

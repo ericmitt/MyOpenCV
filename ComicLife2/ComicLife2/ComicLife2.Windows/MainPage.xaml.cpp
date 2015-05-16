@@ -14,6 +14,7 @@
 #include <opencv2\imgproc\types_c.h>
 #include <opencv2\imgcodecs\imgcodecs.hpp>
 
+#include <opencv2\objdetect.hpp>
 
 
 
@@ -40,6 +41,9 @@ using namespace Windows::Storage::Streams;
 using namespace Windows::Storage;
 using namespace Windows::Storage::Pickers;
 
+using namespace Windows::Media;
+using namespace Windows::Media::Capture;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -49,6 +53,9 @@ ComicLife2::MainPage::MainPage()
 
 	m_bPreviewing = false;
 	mode = -1;
+	appSettings = ApplicationData::Current->LocalSettings->Values;
+	/*rootPage = MainPage::BottomAppBar:*/
+
 }
 
 
@@ -122,7 +129,7 @@ void ComicLife2::MainPage::btn1_Click(Platform::Object^ sender, Windows::UI::Xam
 	
 	//LoadImage();
 
-	cv::Mat image = cv::imread("Assets/stars.png");
+	cv::Mat image = cv::imread("Assets/grpPC1.jpg");
 	Lena = cv::Mat(image.rows, image.cols, CV_8UC4);
 	cvtColor(image, Lena, CV_BGR2BGRA);
 	UpdateImage(Lena);
@@ -252,6 +259,65 @@ void ComicLife2::MainPage::btn4_Click(Platform::Object^ sender, Windows::UI::Xam
 
 void ComicLife2::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
+	//Test button
+
+	
+	//Windows::Media::Capture::CameraCaptureUI MCUI;
+	
+	try
+	{
+		CameraCaptureUI^ dialog = ref new CameraCaptureUI();
+
+		dialog->PhotoSettings->CroppedAspectRatio = Size(16, 9);
+
+		concurrency::task<StorageFile^>(dialog->CaptureFileAsync(CameraCaptureUIMode::Photo)).then([this](StorageFile^ file)
+		{
+			if (nullptr != file)
+			{
+				concurrency::task<Streams::IRandomAccessStream^>(file->OpenAsync(FileAccessMode::Read)).then([this](Streams::IRandomAccessStream^ stream)
+				{
+					BitmapImage^ bitmapImage = ref new BitmapImage();
+					bitmapImage->SetSource(stream);
+					this->img->Source = bitmapImage;
+
+
+
+					WriteableBitmap^  wb = ref new WriteableBitmap(bitmapImage->PixelHeight, bitmapImage->PixelWidth);
+					wb->SetSource(stream);
+
+					
+
+					//Bug bug
+				
+					Lena = cv::Mat(bitmapImage->PixelHeight, bitmapImage->PixelWidth, CV_8UC4);
+					memcpy(Lena.data, (const void*)stream, 4 * bitmapImage->PixelHeight* bitmapImage->PixelWidth);
+					
+					auto x = wb->PixelBuffer->Length;
+					auto y = 4 * bitmapImage->PixelHeight* bitmapImage->PixelWidth;
+					memcpy(Lena.data, (const void*)wb->PixelBuffer, 4 * bitmapImage->PixelHeight* bitmapImage->PixelWidth);
+
+
+					//rootPage->NotifyUser("", NotifyType::StatusMessage);
+				});
+
+				// Store the path in Application Data
+				appSettings->Insert("capturedPhoto", PropertyValue::CreateString(file->Path));
+			}
+			else
+			{
+				//rootPage->NotifyUser("No photo captured", NotifyType::ErrorMessage);
+			}
+		});
+
+	}
+	catch (Platform::Exception^ ex)
+	{
+		//rootPage->NotifyUser(ex->Message, NotifyType::ErrorMessage);
+	}
+
+	
+	
+	
 	//tmpFct();
 
 	/*StorageFile localfile = ApplicationData::Current->LocalFolder->;
@@ -398,3 +464,39 @@ void ComicLife2::MainPage::tmpFct2(){
 }
 
 
+cv::String face_cascade_name = "Assets/haarcascade_frontalface_alt.xml";
+cv::CascadeClassifier face_cascade;
+
+
+void ComicLife2::MainPage::Button_Click_2(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	
+	if (!face_cascade.load(face_cascade_name)) {
+		printf("Couldnt load Face detector '%s'\n", face_cascade_name);
+		exit(1);
+	}
+
+	cv::Mat frame = cv::imread("Assets/grpPC1.jpg");
+
+	if (frame.empty())
+		return;
+
+	std::vector<cv::Rect> faces;
+	cv::Mat frame_gray;
+
+	cvtColor(frame, frame_gray, CV_BGR2GRAY);
+	cv::equalizeHist(frame_gray, frame_gray);
+
+	// Detect faces
+	face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+
+	for (unsigned int i = 0; i < faces.size(); i++)
+	{
+		auto face = faces[i];
+
+		cv::rectangle(Lena, face, cv::Scalar(0, 255, 255), 5);
+
+	}
+
+	UpdateImage(Lena);
+}

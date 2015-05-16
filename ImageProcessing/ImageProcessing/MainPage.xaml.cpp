@@ -46,7 +46,7 @@ using namespace Windows::Foundation::Collections;
 using namespace Windows::Storage::Pickers;
 
 
-
+cv::String ImgName = "Assets/grpPC1.jpg";
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238v
 
@@ -83,7 +83,7 @@ void ImageProcessing::MainPage::Button_Click(Platform::Object^ sender, Windows::
 	//});
 
 	//C:\Users\ericmitt\Pictures\16620387123_b7c40867cb_o.jpg
-	cv::Mat image = cv::imread("Assets/group2.jpg");
+	cv::Mat image = cv::imread(ImgName);
 	//cv::Mat image = cv::imread("C:\\Users\ericmitt\\Pictures\\16620387123_b7c40867cb_o.jpg");
 	Lena = cv::Mat(image.rows, image.cols, CV_8UC4);
 	cvtColor(image, Lena, CV_BGR2BGRA);
@@ -121,30 +121,47 @@ void ImageProcessing::MainPage::Button_Click_1(Platform::Object^ sender, Windows
 	//lenna filter
 	cv::Mat result;
 	cv::Mat intermediateMat;
-	cv::Canny(Lena, intermediateMat, 80, 90);
+	//cv::Canny(Lena, intermediateMat, 80, 90);
+	cv::Canny(Lena, intermediateMat, sliderCanny->Value, sliderCanny2->Value);
 	cv::cvtColor(intermediateMat, result, CV_GRAY2BGRA);
 
 	UpdateImage(result);
 }
 
-
+void Msg(String^ msg)
+{
+	
+}
 void ImageProcessing::MainPage::Button_Click_2(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	cv::Mat intermediateMat;
 	cv::Mat gray;
 	Lena.copyTo(gray);
-	
-	const int MEDIAN_BLUR_FILTER_SIZE = slider1->Value; //9;
-	medianBlur(gray, gray, MEDIAN_BLUR_FILTER_SIZE);
-	cv::Mat edges;
-	const int LAPLACIAN_FILTER_SIZE = slider2->Value; //5;
-	Laplacian(gray, edges, CV_8U, LAPLACIAN_FILTER_SIZE);
-	cv::Mat mask;
-	const int EDGES_THRESHOLD = slider3->Value; //40;
-	threshold(edges, mask, EDGES_THRESHOLD, 255, cv::THRESH_BINARY_INV);
-	
-	UpdateImage(mask);
+	try{
+		int MEDIAN_BLUR_FILTER_SIZE = slider1->Value; //9;
+		if (MEDIAN_BLUR_FILTER_SIZE % 2 == 0)
+			MEDIAN_BLUR_FILTER_SIZE++;
+		medianBlur(gray, gray, MEDIAN_BLUR_FILTER_SIZE);
+		
+		cv::Mat edges;
+		int LAPLACIAN_FILTER_SIZE = slider2->Value; //5;
+		if (LAPLACIAN_FILTER_SIZE % 2 == 0)
+			LAPLACIAN_FILTER_SIZE++;
+		Laplacian(gray, edges, CV_8U, LAPLACIAN_FILTER_SIZE);
+		
+		cv::Mat mask;
+		const int EDGES_THRESHOLD = slider3->Value; //40;
+		
+		if (chkBin->IsChecked)
+			threshold(edges, mask, EDGES_THRESHOLD, 255, cv::THRESH_BINARY_INV);
+		else
+			threshold(edges, mask, EDGES_THRESHOLD, 255, cv::THRESH_BINARY);
 
+		UpdateImage(mask);
+	}
+	catch (Exception^ ex){
+		Msg(ex->Message);
+	}
 }
 
 
@@ -174,8 +191,14 @@ void ImageProcessing::MainPage::Button_Click_3(Platform::Object^ sender, Windows
 cv::String face_cascade_name = "Assets/haarcascade_frontalface_alt.xml";
 cv::CascadeClassifier face_cascade;
 
+cv::String body_cascade_name = "Assets/haarcascade_upperbody.xml"; 
+cv::CascadeClassifier body_cascade;
 
-void internalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVector)
+cv::String eyes_cascade_name = "Assets/haarcascade_eye.xml";
+cv::CascadeClassifier eyes_cascade;
+
+
+void internalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVector, std::vector<cv::Rect> & objectVectorBodies, std::vector<cv::Rect>& objectVectorEyes)
 {
 	cv::Mat frame_gray;
 
@@ -184,6 +207,11 @@ void internalDetectObjects(cv::Mat& inputImg, std::vector<cv::Rect> & objectVect
 
 	// Detect faces
 	face_cascade.detectMultiScale(frame_gray, objectVector,1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+	//detect bodies
+	body_cascade.detectMultiScale(frame_gray, objectVectorBodies, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+	//detect eyes
+	eyes_cascade.detectMultiScale(frame_gray, objectVectorEyes, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(5, 5));
+
 }
 
 void ImageProcessing::MainPage::InitDetectcion(std::string name){
@@ -194,12 +222,26 @@ void ImageProcessing::MainPage::InitDetectcion(std::string name){
 		exit(1);
 	}
 
-	cv::Mat frame = cv::imread("Assets/group2.jpg");
+	if (!body_cascade.load(body_cascade_name)) {
+		printf("Couldnt load Body detector '%s'\n", body_cascade_name);
+		exit(1);
+	}
+
+	if (!eyes_cascade.load(eyes_cascade_name)) {
+		printf("Couldnt load Eyes detector '%s'\n", eyes_cascade_name);
+		exit(1);
+	}
+
+	cv::Mat frame = cv::imread(ImgName);
+	
 	if (frame.empty())
 		return ;
 
 	std::vector<cv::Rect> faces;
-	internalDetectObjects(frame, faces);
+	std::vector<cv::Rect> bodies;
+	std::vector<cv::Rect> eyes;
+
+	internalDetectObjects(frame, faces, bodies,eyes);
 	
 	for (unsigned int i = 0; i < faces.size(); i++)
 	{
@@ -207,6 +249,22 @@ void ImageProcessing::MainPage::InitDetectcion(std::string name){
 		
 		cv::rectangle(Lena, face, cv::Scalar(0, 255, 255),5);
 		
+	}
+
+	for (unsigned int i = 0; i < bodies.size(); i++)
+	{
+		auto body = bodies[i];
+
+		cv::rectangle(Lena, body, cv::Scalar(0, 0, 255), 5);
+
+	}
+
+	for (unsigned int i = 0; i < eyes.size(); i++)
+	{
+		auto eye = eyes[i];
+
+		cv::circle(Lena, cv::Point( eye.x+eye.width/2,eye.y+eye.height/2),5, cv::Scalar(0, 0, 255), 5);
+
 	}
 
 	UpdateImage(Lena);

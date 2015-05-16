@@ -14,6 +14,7 @@ namespace Windows {
             namespace Controls {
                 ref class Image;
                 ref class Slider;
+                ref class CheckBox;
             }
         }
     }
@@ -35,6 +36,9 @@ namespace ImageProcessing
         private: ::Windows::UI::Xaml::Controls::Slider^ slider1;
         private: ::Windows::UI::Xaml::Controls::Slider^ slider2;
         private: ::Windows::UI::Xaml::Controls::Slider^ slider3;
+        private: ::Windows::UI::Xaml::Controls::Slider^ sliderCanny;
+        private: ::Windows::UI::Xaml::Controls::Slider^ sliderCanny2;
+        private: ::Windows::UI::Xaml::Controls::CheckBox^ chkBin;
     };
 }
 

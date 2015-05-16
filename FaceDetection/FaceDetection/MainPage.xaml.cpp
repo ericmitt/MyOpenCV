@@ -63,7 +63,7 @@ void FaceDetection::MainPage::UpdateImage(const cv::Mat& image)
 	img1->Source = bitmap;
 }
 
-cv::String face_cascade_name = "Assets/haarcascade_frontalface_alt.xml";
+cv::String face_cascade_name = "Assets/haarcascade_frontalface_alt.xml";//Assets/haarcascade_fullbody.xml";// 
 
 void FaceDetection::MainPage::InitBtn_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {

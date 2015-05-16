@@ -1,8 +1,14 @@
 App.xbf
 MainPage.xbf
+Assets\femaleFace.jpg
 Assets\group1.jpg
 Assets\group2.jpg
+Assets\grpPC1.jpg
+Assets\grpPC2.jpg
+Assets\haarcascade_eye.xml
 Assets\haarcascade_frontalface_alt.xml
+Assets\haarcascade_fullbody.xml
+Assets\haarcascade_upperbody.xml
 Assets\iss_earth_viewer.jpg
 Assets\Logo.scale-100.png
 Assets\ouam.jpg

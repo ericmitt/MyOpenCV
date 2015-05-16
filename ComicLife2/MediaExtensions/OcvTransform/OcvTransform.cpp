@@ -13,6 +13,7 @@
 #include <opencv2\features2d\features2d.hpp>
 
 
+#include <opencv2\objdetect.hpp>
 
 using namespace Microsoft::WRL;
 
@@ -1274,6 +1275,12 @@ HRESULT OcvImageManipulations::EndStreaming()
 
 
 
+
+
+cv::String face_cascade_name = "Assets/haarcascade_frontalface_alt.xml";
+cv::CascadeClassifier face_cascade;
+
+
 // Generate output data.
 
 HRESULT OcvImageManipulations::OnProcessOutput(IMFMediaBuffer *pIn, IMFMediaBuffer *pOut)
@@ -1408,9 +1415,17 @@ HRESULT OcvImageManipulations::OnProcessOutput(IMFMediaBuffer *pIn, IMFMediaBuff
 		const int EDGES_THRESHOLD = 40;
 		threshold(edges, mask, EDGES_THRESHOLD, 255, cv::THRESH_BINARY_INV);
 		mask.copyTo(OutputFrame);
+	} break;
+
+	
+
+	case FaceDetec:
+	{
+
+		cv::Mat gray(InputFrame);
 
 		
-	
+		
 	} break;
 
 	

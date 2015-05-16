@@ -171,8 +171,11 @@
     <None Include="ImageProcessing_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\femaleFace.jpg" />
     <Image Include="Assets\group1.jpg" />
     <Image Include="Assets\group2.jpg" />
+    <Image Include="Assets\grpPC1.jpg" />
+    <Image Include="Assets\grpPC2.jpg" />
     <Image Include="Assets\iss_earth_viewer.jpg" />
     <Image Include="Assets\Logo.scale-100.png" />
     <Image Include="Assets\ouam.jpg" />
@@ -197,7 +200,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Xml Include="Assets\haarcascade_eye.xml" />
     <Xml Include="Assets\haarcascade_frontalface_alt.xml" />
+    <Xml Include="Assets\haarcascade_fullbody.xml" />
+    <Xml Include="Assets\haarcascade_upperbody.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

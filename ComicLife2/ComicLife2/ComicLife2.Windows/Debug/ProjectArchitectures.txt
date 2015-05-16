@@ -1,2 +1,2 @@
-C:\temp\opencv\samples\winrt\ComicLife2\ComicLife2\ComicLife2.Windows\ComicLife2.Windows.vcxproj;x86
-C:\temp\opencv\samples\winrt\ComicLife2\MediaExtensions\OcvTransform\OcvTransform.vcxproj;x86
+C:\temp\MyOpenCV\ComicLife2\ComicLife2\ComicLife2.Windows\ComicLife2.Windows.vcxproj;x86
+C:\temp\MyOpenCV\ComicLife2\MediaExtensions\OcvTransform\OcvTransform.vcxproj;x86

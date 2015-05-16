@@ -63,9 +63,27 @@
     <Image Include="Assets\group2.jpg">
       <Filter>Assets</Filter>
     </Image>
+    <Image Include="Assets\grpPC1.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\grpPC2.jpg">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\femaleFace.jpg">
+      <Filter>Assets</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Assets\haarcascade_frontalface_alt.xml">
+      <Filter>Assets</Filter>
+    </Xml>
+    <Xml Include="Assets\haarcascade_fullbody.xml">
+      <Filter>Assets</Filter>
+    </Xml>
+    <Xml Include="Assets\haarcascade_eye.xml">
+      <Filter>Assets</Filter>
+    </Xml>
+    <Xml Include="Assets\haarcascade_upperbody.xml">
       <Filter>Assets</Filter>
     </Xml>
   </ItemGroup>

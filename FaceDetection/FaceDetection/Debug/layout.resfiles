@@ -5,7 +5,11 @@ Assets\group2.JPG
 Assets\group3.png
 Assets\group4.JPG
 Assets\group5.jpg
+Assets\groupBody1.jpg
+Assets\groupBody2.jpg
+Assets\groupBody3.jpg
 Assets\haarcascade_frontalface_alt.xml
+Assets\haarcascade_fullbody.xml
 Assets\Logo.scale-100.png
 Assets\SmallLogo.scale-100.png
 Assets\SplashScreen.scale-100.png
@@ -13,7 +17,10 @@ Assets\StoreLogo.scale-100.png
 opencv_core300d.dll
 opencv_features2d300d.dll
 opencv_flann300d.dll
+opencv_imgcodecs300.dll
 opencv_imgcodecs300d.dll
+opencv_imgproc300.dll
 opencv_imgproc300d.dll
 opencv_ml300d.dll
+opencv_objdetect300.dll
 opencv_objdetect300d.dll
