@@ -1,0 +1,1 @@
+C:\temp\MyOpenCV\VideoCV\VideoCV\VideoCV.vcxproj;x86

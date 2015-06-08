@@ -99,6 +99,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>ImageProcessing_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxBundle>Auto</AppxBundle>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -118,7 +121,7 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;opencv_imgcodecs300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_objdetect300d.lib</AdditionalDependencies>
+      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;opencv_imgcodecs300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_objdetect300$(DebugSuffix).lib;opencv_videoio300$(DebugSuffix).lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OpenCV_Lib);%(AdditionalLibraryDirectories);C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -128,7 +131,7 @@
       <DisableSpecificWarnings>4453;28204</DisableSpecificWarnings>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;opencv_imgcodecs300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_objdetect300d.lib</AdditionalDependencies>
+      <AdditionalDependencies>opencv_core300$(DebugSuffix).lib;opencv_imgproc300$(DebugSuffix).lib;opencv_features2d300$(DebugSuffix).lib;opencv_flann300$(DebugSuffix).lib;opencv_ml300$(DebugSuffix).lib;opencv_imgcodecs300$(DebugSuffix).lib;%(AdditionalDependencies);opencv_objdetect300$(DebugSuffix).lib;opencv_videoio300$(DebugSuffix).lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(OpenCV_Lib);%(AdditionalLibraryDirectories);C:\temp\opencv\bin\install\WS\8.1\x86\x86\vc12\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -165,7 +168,40 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="..\..\..\opencv\bin\WS\8.1\x86\bin\Debug\opencv_objdetect300d.dll">
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_core300d.dll" />
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_features2d300.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_features2d300d.dll" />
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_flann300.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_flann300d.dll" />
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgcodecs300d.dll" />
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_imgproc300d.dll" />
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_ml300.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_ml300d.dll" />
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_objdetect300.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_objdetect300d.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_videoio300.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\opencv\bin\install\WS\8.1\x86\x86\vc12\bin\opencv_videoio300d.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
     <None Include="ImageProcessing_TemporaryKey.pfx" />

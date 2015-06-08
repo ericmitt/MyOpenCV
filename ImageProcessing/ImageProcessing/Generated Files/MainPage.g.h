@@ -15,6 +15,7 @@ namespace Windows {
                 ref class Image;
                 ref class Slider;
                 ref class CheckBox;
+                ref class Button;
             }
         }
     }
@@ -39,6 +40,8 @@ namespace ImageProcessing
         private: ::Windows::UI::Xaml::Controls::Slider^ sliderCanny;
         private: ::Windows::UI::Xaml::Controls::Slider^ sliderCanny2;
         private: ::Windows::UI::Xaml::Controls::CheckBox^ chkBin;
+        private: ::Windows::UI::Xaml::Controls::Button^ btnVideo;
+        private: ::Windows::UI::Xaml::Controls::Image^ ImgVideo;
     };
 }
 

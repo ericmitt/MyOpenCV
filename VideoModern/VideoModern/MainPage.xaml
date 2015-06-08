@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="VideoModern.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VideoModern"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+    <Page.BottomAppBar>
+        
+        <AppBar>
+            <!--<AppBarButton Label="Filter 1" Icon="Pictures" />
+            <AppBarButton Label="Filter 2" Icon="People" />-->
+            <StackPanel >
+                <Slider Name="slider1" Width="300" Minimum="1" ValueChanged="slider1_ValueChanged"  />
+            </StackPanel>
+        </AppBar>
+        
+    </Page.BottomAppBar>
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image Name="ImgCtl" Margin="2,4,2,2" Stretch="Fill" Tapped="ImgCtl_Tapped"/>
+        
+           
+        
+    </Grid>
+</Page>

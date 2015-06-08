@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="c2cadd2c-208b-42e4-99c6-dd3e614c3ea0" Publisher="CN=ericmitt" Version="1.0.0.0" />
+  <Identity Name="ImageProcessing" Publisher="CN=ericmitt" Version="1.0.0.0" />
   <Properties>
     <DisplayName>ImageProcessing</DisplayName>
     <PublisherDisplayName>ericmitt</PublisherDisplayName>

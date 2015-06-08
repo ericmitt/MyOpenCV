@@ -1,0 +1,16 @@
+App.xbf
+MainPage.xbf
+Assets\Logo.scale-100.png
+Assets\SmallLogo.scale-100.png
+Assets\SplashScreen.scale-100.png
+Assets\StoreLogo.scale-100.png
+opencv_core300.dll
+opencv_core300.dll
+opencv_core300d.dll
+opencv_imgcodecs300.dll
+opencv_imgcodecs300d.dll
+opencv_imgproc300.dll
+opencv_imgproc300d.dll
+opencv_video300.dll
+opencv_video300d.dll
+opencv_videoio300.dll

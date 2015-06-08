@@ -9,6 +9,9 @@
 #include <opencv2\imgproc\types_c.h>
 #include <opencv2\imgcodecs\imgcodecs.hpp>
 #include <opencv2\core\core.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/videoio/cap_winrt.hpp>
+
 #include <ppltasks.h>
 #include <wrl\client.h>
 #include <Robuffer.h>
@@ -21,6 +24,7 @@
 #include <windows.storage.h>
 
 #include <stdlib.h>
+
 
 
 
@@ -55,7 +59,7 @@ MainPage::MainPage()
 	InitializeComponent();
 }
 
-
+cv::VideoCapture cam;
 void ImageProcessing::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	//FileOpenPicker^ openPicker = ref new FileOpenPicker();
@@ -82,13 +86,22 @@ void ImageProcessing::MainPage::Button_Click(Platform::Object^ sender, Windows::
 
 	//});
 
-	//C:\Users\ericmitt\Pictures\16620387123_b7c40867cb_o.jpg
-	cv::Mat image = cv::imread(ImgName);
-	//cv::Mat image = cv::imread("C:\\Users\ericmitt\\Pictures\\16620387123_b7c40867cb_o.jpg");
-	Lena = cv::Mat(image.rows, image.cols, CV_8UC4);
-	cvtColor(image, Lena, CV_BGR2BGRA);
-	UpdateImage(Lena);
-
+	cv::Mat tmp;
+	if (cam.isOpened())
+	{
+		cam.read(tmp);
+		Lena = tmp;
+		UpdateImage(Lena);
+	}
+	else
+	{
+		//C:\Users\ericmitt\Pictures\16620387123_b7c40867cb_o.jpg
+		cv::Mat image = cv::imread(ImgName);
+		//cv::Mat image = cv::imread("C:\\Users\ericmitt\\Pictures\\16620387123_b7c40867cb_o.jpg");
+		Lena = cv::Mat(image.rows, image.cols, CV_8UC4);
+		cvtColor(image, Lena, CV_BGR2BGRA);
+		UpdateImage(Lena);
+	}
 	
 	
 }
@@ -277,4 +290,95 @@ void ImageProcessing::MainPage::Button_Click_4(Platform::Object^ sender, Windows
 	 	
 			InitDetectcion("");
 		
+}
+using namespace cv;
+int MEDIAN_BLUR_FILTER_SIZE = 3; //9 slider1->Value;
+int LAPLACIAN_FILTER_SIZE = 5; //5 slider2->Value;
+int EDGES_THRESHOLD = 40; //40 slider3->Value;
+void cvVideoTask()
+{
+	
+	
+	cam.open(0);
+	Mat edges;
+	Mat frame;
+
+	std::vector<cv::Rect> faces;
+
+	// process frames
+	while (1)
+	{
+		// get a new frame from camera - this is non-blocking per spec
+		cam >> frame;
+		if (!cam.grab()) continue;
+
+		/*cvtColor(frame, edges, COLOR_RGB2GRAY);
+		GaussianBlur(edges, edges, cv::Size(7, 7), 1.5, 1.5);
+		Canny(edges, edges, 0, 30, 3);
+		cvtColor(edges, frame, COLOR_GRAY2RGB);
+		*/
+		
+		
+		/*if (MEDIAN_BLUR_FILTER_SIZE % 2 == 0)
+			MEDIAN_BLUR_FILTER_SIZE++;
+		medianBlur(frame, frame, MEDIAN_BLUR_FILTER_SIZE);
+		if (LAPLACIAN_FILTER_SIZE % 2 == 0)
+			LAPLACIAN_FILTER_SIZE++;
+		Laplacian(frame, frame, CV_8U, LAPLACIAN_FILTER_SIZE);
+		cv::Mat mask;
+		threshold(frame, frame, EDGES_THRESHOLD, 255, cv::THRESH_BINARY_INV);
+		*/
+
+
+		
+
+		// Detect faces
+		face_cascade.detectMultiScale(frame, faces, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
+
+		for (unsigned int i = 0; i < faces.size(); i++)
+		{
+			auto face = faces[i];
+
+			cv::rectangle(frame, face, cv::Scalar(0,0, 255), 3);
+
+		}
+
+
+		winrt_imshow();
+	}
+}
+
+void ImageProcessing::MainPage::btnVideo_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+	cv::winrt_setFrameContainer(ImgVideo);
+	cv::winrt_startMessageLoop(cvVideoTask);
+	
+	if (!face_cascade.load(face_cascade_name)) {
+		printf("Couldnt load Face detector '%s'\n", face_cascade_name);
+		exit(1);
+	}
+}
+
+
+void ImageProcessing::MainPage::slider1_ValueChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs^ e)
+{
+	if (slider1 == nullptr)
+		return;
+	MEDIAN_BLUR_FILTER_SIZE = slider1->Value;
+}
+
+
+void ImageProcessing::MainPage::slider2_ValueChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs^ e)
+{
+	if (slider2 == nullptr)
+		return;
+	LAPLACIAN_FILTER_SIZE = slider2->Value;
+}
+
+
+void ImageProcessing::MainPage::slider3_ValueChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs^ e)
+{
+	if (slider3 == nullptr)
+		return;
+	EDGES_THRESHOLD = slider3->Value;
 }

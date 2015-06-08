@@ -36,6 +36,10 @@ void ::ImageProcessing::MainPage::InitializeComponent()
     sliderCanny2 = safe_cast<::Windows::UI::Xaml::Controls::Slider^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"sliderCanny2"));
     // Get the CheckBox named 'chkBin'
     chkBin = safe_cast<::Windows::UI::Xaml::Controls::CheckBox^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"chkBin"));
+    // Get the Button named 'btnVideo'
+    btnVideo = safe_cast<::Windows::UI::Xaml::Controls::Button^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"btnVideo"));
+    // Get the Image named 'ImgVideo'
+    ImgVideo = safe_cast<::Windows::UI::Xaml::Controls::Image^>(static_cast<Windows::UI::Xaml::IFrameworkElement^>(this)->FindName(L"ImgVideo"));
 }
 
 void ::ImageProcessing::MainPage::Connect(int connectionId, Platform::Object^ target)
@@ -59,8 +63,24 @@ void ::ImageProcessing::MainPage::Connect(int connectionId, Platform::Object^ ta
             ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::ImageProcessing::MainPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&MainPage::Button_Click_3);
         break;
     case 5:
+        (safe_cast<::Windows::UI::Xaml::Controls::Primitives::RangeBase^>(target))->ValueChanged +=
+            ref new ::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler(this, (void (::ImageProcessing::MainPage::*)(Platform::Object^, Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs^))&MainPage::slider1_ValueChanged);
+        break;
+    case 6:
+        (safe_cast<::Windows::UI::Xaml::Controls::Primitives::RangeBase^>(target))->ValueChanged +=
+            ref new ::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler(this, (void (::ImageProcessing::MainPage::*)(Platform::Object^, Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs^))&MainPage::slider2_ValueChanged);
+        break;
+    case 7:
+        (safe_cast<::Windows::UI::Xaml::Controls::Primitives::RangeBase^>(target))->ValueChanged +=
+            ref new ::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler(this, (void (::ImageProcessing::MainPage::*)(Platform::Object^, Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs^))&MainPage::slider3_ValueChanged);
+        break;
+    case 8:
         (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
             ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::ImageProcessing::MainPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&MainPage::Button_Click_4);
+        break;
+    case 9:
+        (safe_cast<::Windows::UI::Xaml::Controls::Primitives::ButtonBase^>(target))->Click +=
+            ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::ImageProcessing::MainPage::*)(Platform::Object^, Windows::UI::Xaml::RoutedEventArgs^))&MainPage::btnVideo_Click);
         break;
     }
     (void)connectionId; // Unused parameter

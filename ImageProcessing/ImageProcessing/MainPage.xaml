@@ -9,17 +9,19 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,18,0,-18">
         <Button Content="Load Image" HorizontalAlignment="Left" Height="58" Margin="87,24,0,0" VerticalAlignment="Top" Width="187" Click="Button_Click"/>
-        <Image  Name="ctlImg" HorizontalAlignment="Left" Height="436" Margin="348,27,0,0" VerticalAlignment="Top" Width="936"/>
+        <Image  Name="ctlImg" HorizontalAlignment="Left" Height="326" Margin="348,27,0,0" VerticalAlignment="Top" Width="768"/>
         <Button Content="Canny" HorizontalAlignment="Left" Height="58" Margin="87,97,0,0" VerticalAlignment="Top" Width="187" Click="Button_Click_1"/>
         <Button Content="Comics" HorizontalAlignment="Left" Height="58" Margin="87,213,0,0" VerticalAlignment="Top" Width="187" Click="Button_Click_2"/>
         <Button Content="Features" HorizontalAlignment="Left" Height="58" Margin="87,421,0,0" VerticalAlignment="Top" Width="187" Click="Button_Click_3"/>
-        <Slider Name="slider1" HorizontalAlignment="Left" Height="33" Margin="90,259,0,0" VerticalAlignment="Top" Width="181" Value="1" LargeChange="1" Maximum="10" SmallChange="1"/>
-        <Slider Name="slider2"  HorizontalAlignment="Left" Height="33" Margin="90,289,0,0" VerticalAlignment="Top" Width="181" Value="5" Maximum="31" LargeChange="1" Minimum="1"/>
-        <Slider Name="slider3" HorizontalAlignment="Left" Height="33" Margin="90,320,0,0" VerticalAlignment="Top" Width="181" Value="40"/>
+        <Slider Name="slider1" HorizontalAlignment="Left" Height="33" Margin="90,259,0,0" VerticalAlignment="Top" Width="181" Value="1" LargeChange="1" Maximum="10" SmallChange="1" ValueChanged="slider1_ValueChanged" />
+        <Slider Name="slider2"  HorizontalAlignment="Left" Height="33" Margin="90,289,0,0" VerticalAlignment="Top" Width="181" Value="5" Maximum="31" LargeChange="1" Minimum="1" ValueChanged="slider2_ValueChanged"/>
+        <Slider Name="slider3" HorizontalAlignment="Left" Height="33" Margin="90,320,0,0" VerticalAlignment="Top" Width="181" Value="40" ValueChanged="slider3_ValueChanged"/>
         <Button Content="Face" HorizontalAlignment="Left" Height="58" Margin="87,500,0,0" VerticalAlignment="Top" Width="187" Click="Button_Click_4"/>
         <Slider x:Name="sliderCanny"  HorizontalAlignment="Left" Height="33" Margin="90,146,0,0" VerticalAlignment="Top" Width="181" Value="80" Maximum="100" LargeChange="1" Minimum="1"/>
         <Slider x:Name="sliderCanny2"  HorizontalAlignment="Left" Height="33" Margin="90,176,0,0" VerticalAlignment="Top" Width="181" Value="90" Maximum="100" LargeChange="1" Minimum="1"/>
         <CheckBox x:Name="chkBin" Content="Inverse" HorizontalAlignment="Left" Margin="87,364,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Button  x:Name="btnVideo" Content="Video" HorizontalAlignment="Left" Height="56" Margin="90,609,0,0" VerticalAlignment="Top" Width="181" Click="btnVideo_Click"/>
+        <Image x:Name="ImgVideo" HorizontalAlignment="Left" Height="312" Margin="899,367,0,0" VerticalAlignment="Top" Width="408"/>
 
     </Grid>
 </Page>
