@@ -39,7 +39,22 @@ MainPage::MainPage()
 cv::VideoCapture cam;
 int seuil = 10;
 int nbPixel = 0;
+void Filter(Mat f)
+{
+	for (int i = 0; i < f.rows; i++)
+	{
+		for (int j = 0; j < f.cols; j++)
+		{
+			if (f.at<cv::Vec3b>(i, j)[2] < 125)
+			{
+				f.at<cv::Vec3b>(i, j)[2] = 255;
+				f.at<cv::Vec3b>(i, j)[1] = 0;
+				f.at<cv::Vec3b>(i, j)[0] = 0;
+			}
+		}
+	}
 
+}
 void Compare(Mat f, Mat oldF)
 {
 	if (oldF.rows == 0)
@@ -72,7 +87,7 @@ void Compare(Mat f, Mat oldF)
 }
 
 
-
+int option = 1;
 void cvVideoTask()
 {
 	
@@ -84,11 +99,17 @@ void cvVideoTask()
 		cam >> frame;
 		if (!cam.grab()) continue;
 
-		frame.copyTo(tmp);
-		Compare(frame, oldFrame);
-		tmp.copyTo(oldFrame);
-
-
+		if(option==0)
+		{
+			frame.copyTo(tmp);
+			Compare(frame, oldFrame);
+			tmp.copyTo(oldFrame);
+		}
+		if (option == 1)
+		{
+			frame.copyTo(tmp);
+			Filter(frame);
+		}
 
 		winrt_imshow();
 	}

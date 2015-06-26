@@ -21,3 +21,5 @@ namespace FunVideo
 		void Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }
+
+void cvVideoTask();
